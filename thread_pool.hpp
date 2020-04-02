@@ -8,6 +8,8 @@
 #define MAX_THREAD 5
 typedef void(*handler_t)(void *);
 
+// 线程任务类
+// 为了通用，函数指针的参数设为 void*
 class ThreadTask {
 private:
     void* _arg;
@@ -31,6 +33,8 @@ public:
     }
 };  
 
+// 线程池类
+// 封装线程池接口
 class ThreadPool {
 private:
     int _thread_max;
